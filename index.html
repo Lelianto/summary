@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "custom-white": "#FFF1DC",
+              "custom-grey": "#d0d7de",
+              "custom-brown": "#E8D5C4",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="sticky top-0 bg-custom-white w-full py-2">
+      <div class="flex items-center justify-between container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <img class="h-8 w-8 mr-3" src="./assets/github-icon.png" alt="" />
+          <input
+            class="border focus:w-96 h-7 mr-3 rounded-md px-2.5"
+            placeholder="Search or jump to..."
+            type="text"
+            name="search"
+            id="search-id"
+          />
+          <!-- Menu Lists -->
+          <div class="hidden lg:flex">
+            <div class="mr-3 font-bold text-sm">Pull requests</div>
+            <div class="mr-3 font-bold text-sm">Issues</div>
+            <div class="mr-3 font-bold text-sm">Explore</div>
+          </div>
+        </div>
+        <img class="h-8 w-8" src="./assets/github-icon.png" alt="" />
+      </div>
+    </div>
+    <!-- Menu -->
+    <div class="min-h-screen"></div>
+    <!-- Content -->
+    <div class="container mx-auto p-4">
+      <div class="grid sm:grid-cols-1 lg:grid-cols-7 gap-4">
+        <div class="lg:col-span-5">
+          <div class="border-2 border-custom-grey rounded-md bg-amber-100">
+            <!-- Commit info section -->
+            <div
+              class="flex justify-between items-center p-4 border-b-2 border-custom-grey"
+            >
+              <div class="flex">
+                <img class="h-6 w-6" src="./assets/github-icon.png" alt="" />
+                <div class="ml-4">
+                  <b class="cursor-pointer hover:underline underline-offset-2"
+                    >Lelianto</b
+                  >
+                  first commit
+                </div>
+              </div>
+              <div class="font-bold">Commit</div>
+            </div>
+            <!-- List File -->
+            <div>
+              <table class="w-full">
+                <tbody>
+                  <tr
+                    class="border-b-2 border-custom-grey hover:bg-custom-brown"
+                  >
+                    <td class="pl-4 py-2">index.css</td>
+                    <td class="text-center">first commit</td>
+                    <td class="text-right pr-4">48 minutes ago</td>
+                  </tr>
+                  <tr class="hover:bg-custom-brown">
+                    <td class="pl-4 py-2">index.html</td>
+                    <td class="text-center">first commit</td>
+                    <td class="text-right pr-4">48 minutes ago</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:col-span-2 bg-lime-100 border-2 border-custom-grey rounded-md"
+        >
+          Bagian 2
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div></div>
+  </body>
+</html>
